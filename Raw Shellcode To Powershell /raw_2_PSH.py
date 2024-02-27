@@ -3,8 +3,8 @@ def format_shellcode(input_file, output_file):
     with open(input_file, 'rb') as f:
         raw_shellcode = f.read()
 
-    # Convert each byte to a string representation in the format \xXX
-    formatted_shellcode = r"\x" + r"\x".join("{:02x}".format(byte) for byte in raw_shellcode)
+    # Convert each byte to a string representation in the format 0xXX
+    formatted_shellcode = ",".join("0x{:02x}".format(byte) for byte in raw_shellcode)
 
     # Write the formatted shellcode to the output file
     with open(output_file, 'w') as f:
