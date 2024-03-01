@@ -1,5 +1,7 @@
 Token Duplicator that can be used with Execute-Assembly in CS or Havoc. Mainly based on the code in this repo: https://github.com/yusufqk/SystemToken
 
+Thanks to @icyguider for pointing me in the right direction on this.
+
 Compile with Mono-Devel on Linux. 
 
 mcs tokenduplicatorC#.cs /out:token.exe
