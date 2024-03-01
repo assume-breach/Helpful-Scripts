@@ -1,4 +1,4 @@
-Token Duplicator that can be used with Execute-Assembly in CS or Havoc.
+Token Duplicator that can be used with Execute-Assembly in CS or Havoc. Mainly based on the code in this repo: https://github.com/yusufqk/SystemToken
 
 Compile with Mono-Devel on Linux. 
 
