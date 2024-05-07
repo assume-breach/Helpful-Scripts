@@ -30,7 +30,6 @@ sudo bash -c 'cat <<EOF > /etc/samba/smb.conf
    guest ok = yes
    create mask = 0777
    directory mask = 0777
-   force user = your_username_here
 EOF'
 
 # Restart the Samba service to apply changes
