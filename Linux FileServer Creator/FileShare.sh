@@ -4,7 +4,7 @@
 sudo apt update
 
 # Install Samba
-sudo apt install samba -y
+sudo apt install samba openssh-server git net-tools -y
 
 # Create a directory to share
 sudo mkdir -p /srv/fileshare
@@ -32,5 +32,11 @@ sudo bash -c 'cat <<EOF > /etc/samba/smb.conf
    directory mask = 0777
 EOF'
 
-# Restart the Samba service to apply changes
-sudo systemctl restart smbd
+echo "0 1 * * * /usr/bin/apt update -y && /usr/bin/apt upgrade -y" | sudo crontab -u root -
+echo "0 3 * * * /sbin/shutdown -r now" | sudo crontab -u root -
+
+# Enable Services
+systemctl set-default multi-user.target
+sudo systemctl enable smbd
+sudo systemctl enable ssh
+reboot now
