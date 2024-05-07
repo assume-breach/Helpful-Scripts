@@ -1,1 +1,1 @@
-An insecure file server build script. All users on the network will have access to the files stored on this server. 
+An insecure file server build script. This is meant for a quick standalone file server where all users on the network will have full access. No OPSEC has been taken into account. Use accordingly.
